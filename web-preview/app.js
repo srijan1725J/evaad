@@ -1,5 +1,5 @@
 // ── Config ──
-const API = 'http://127.0.0.1:8000';
+const API = 'https://evaad.onrender.com';
 
 // ── Device identity ──
 let DEVICE_ID = localStorage.getItem('evaad.device_id');
