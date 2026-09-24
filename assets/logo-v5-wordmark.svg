@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48">
+  <defs>
+    <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8a3d"/>
+      <stop offset="50%" stop-color="#e8458a"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="wgl"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g transform="translate(0,0)">
+    <path d="M 8 28 Q 32 12 56 28" stroke="url(#wg)" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#wgl)"/>
+    <polygon points="2,30 14,24 14,34" fill="url(#wg)"/>
+    <polygon points="62,30 50,24 50,34" fill="url(#wg)"/>
+    <path d="M 19 38 Q 32 30 45 38 Q 32 46 19 38 Z" fill="url(#wg)"/>
+    <ellipse cx="32" cy="38" rx="6" ry="4.2" fill="#07080c"/>
+    <circle cx="33.4" cy="36.6" r="1.4" fill="white" opacity="0.95"/>
+  </g>
+  <text x="78" y="35" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="800" fill="url(#wg)" letter-spacing="-0.5">evaad</text>
+</svg>

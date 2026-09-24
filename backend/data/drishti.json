@@ -1,0 +1,174 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "Should social media be regulated by the government?",
+      "genre": "Politics",
+      "region": "India",
+      "created_at": "2026-07-22T05:40:11.716554+00:00",
+      "views": 145,
+      "arguments": [
+        {
+          "id": 1,
+          "side": "for",
+          "body": "India's IT Rules 2021 already require platforms to appoint grievance officers and remove unlawful content within 36 hours. Government oversight prevents the spread of fake news and hate speech that can incite communal violence.",
+          "created_at": "2026-07-21T09:40:11.716554+00:00",
+          "liked_by": [
+            "dev-abc123-1699999999999",
+            "dev-xyz789-1700000000000",
+            "dev-sample-1700100000000"
+          ]
+        },
+        {
+          "id": 2,
+          "side": "for",
+          "body": "Section 69A of the IT Act gives the government power to block content in the interest of sovereignty and integrity of India. This is necessary because foreign platforms often ignore Indian court orders.",
+          "created_at": "2026-07-17T05:40:11.716554+00:00",
+          "liked_by": [
+            "dev-abc123-1699999999999"
+          ]
+        },
+        {
+          "id": 3,
+          "side": "against",
+          "body": "The Supreme Court in Shreya Singhal v. Union of India struck down Section 66A precisely because vague regulation chills free speech. Government control often becomes a tool to silence dissent rather than prevent genuine harm.",
+          "created_at": "2026-07-22T05:40:11.716554+00:00",
+          "liked_by": [
+            "dev-xyz789-1700000000000",
+            "dev-sample-1700100000000",
+            "dev-anon-1700200000000",
+            "dev-test-1700300000000"
+          ]
+        },
+        {
+          "id": 4,
+          "side": "against",
+          "body": "When governments regulate speech, they inevitably overreach. Look at how the Emergency-era censorship was used to suppress opposition voices. Self-regulation with judicial oversight is far safer.",
+          "created_at": "2026-07-21T09:40:11.716554+00:00",
+          "liked_by": [
+            "dev-abc123-1699999999999",
+            "dev-xyz789-1700000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Is online education as effective as in-person schooling?",
+      "genre": "Education",
+      "region": "India",
+      "created_at": "2026-07-21T09:40:11.716554+00:00",
+      "views": 89,
+      "arguments": [
+        {
+          "id": 1,
+          "side": "for",
+          "body": "Online education democratizes access. A student in a remote village in Bihar can now attend the same lectures as someone in Delhi. Platforms like SWAYAM and NPTEL have proven this model works at scale.",
+          "created_at": "2026-07-21T09:40:11.716554+00:00",
+          "liked_by": [
+            "dev-abc123-1699999999999",
+            "dev-sample-1700100000000"
+          ]
+        },
+        {
+          "id": 2,
+          "side": "against",
+          "body": "Digital divide is real. Only 43% of Indian households have internet access. Online education widens the gap between urban elite and rural poor, and lacks the social-emotional learning that happens in physical classrooms.",
+          "created_at": "2026-07-21T09:40:11.716554+00:00",
+          "liked_by": [
+            "dev-xyz789-1700000000000",
+            "dev-anon-1700200000000",
+            "dev-test-1700300000000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Should India adopt a uniform civil code?",
+      "genre": "Politics",
+      "region": "India",
+      "created_at": "2026-07-17T05:40:11.716554+00:00",
+      "views": 256,
+      "arguments": [
+        {
+          "id": 1,
+          "side": "for",
+          "body": "Article 44 of the Constitution itself directs the State to secure a Uniform Civil Code. Personal laws based on religion often discriminate against women — triple talaq and unequal inheritance rights are clear examples.",
+          "created_at": "2026-07-17T05:40:11.716554+00:00",
+          "liked_by": [
+            "dev-abc123-1699999999999",
+            "dev-xyz789-1700000000000",
+            "dev-sample-1700100000000",
+            "dev-anon-1700200000000"
+          ]
+        },
+        {
+          "id": 2,
+          "side": "against",
+          "body": "India's strength is its diversity. Imposing a uniform code ignores the cultural and religious contexts that personal laws accommodate. It could be seen as majoritarian imposition and threaten social harmony.",
+          "created_at": "2026-07-17T05:40:11.716554+00:00",
+          "liked_by": [
+            "dev-test-1700300000000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Is AI art generation ethical?",
+      "genre": "Tech",
+      "region": "Global",
+      "created_at": "2026-07-22T05:40:11.716554+00:00",
+      "views": 74,
+      "arguments": [
+        {
+          "id": 1,
+          "side": "for",
+          "body": "isiojjdpfg",
+          "created_at": "2026-07-22T05:40:28.579196+00:00",
+          "liked_by": []
+        },
+        {
+          "id": 2,
+          "side": "for",
+          "body": "gjdbogod",
+          "created_at": "2026-07-22T05:40:32.271101+00:00",
+          "liked_by": []
+        },
+        {
+          "id": 3,
+          "side": "for",
+          "body": "djfgkjd",
+          "created_at": "2026-07-22T05:40:35.373680+00:00",
+          "liked_by": []
+        },
+        {
+          "id": 4,
+          "side": "against",
+          "body": "dfk gkjdf",
+          "created_at": "2026-07-22T05:40:43.888661+00:00",
+          "liked_by": []
+        },
+        {
+          "id": 5,
+          "side": "against",
+          "body": "djbgbd",
+          "created_at": "2026-07-22T05:40:46.338586+00:00",
+          "liked_by": [
+            "dev-u8c1uv-1784691525585"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Should cricket remain India's unofficial national sport?",
+      "genre": "Sports",
+      "region": "India",
+      "created_at": "2026-07-21T09:40:11.716554+00:00",
+      "views": 201,
+      "arguments": []
+    }
+  ]
+}

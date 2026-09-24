@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>evaad — See both sides.</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff8a3d"/>
+              <stop offset="50%" stop-color="#e8458a"/>
+              <stop offset="100%" stop-color="#ff6b6b"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <path d="M 8 28 Q 32 12 56 28" stroke="url(#lg)" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+          <polygon points="2,30 14,24 14,34" fill="url(#lg)"/>
+          <polygon points="62,30 50,24 50,34" fill="url(#lg)"/>
+          <path d="M 19 38 Q 32 30 45 38 Q 32 46 19 38 Z" fill="url(#lg)"/>
+          <ellipse cx="32" cy="38" rx="6" ry="4.2" fill="#07080c"/>
+          <circle cx="33.4" cy="36.6" r="1.4" fill="white" opacity="0.95"/>
+        </svg>
+      </div>
+      <div>
+        <h1 id="brand-name">evaad</h1>
+        <p id="brand-tagline">See both sides.</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="lang-switch">
+        <span data-i18n="lang">Language</span>
+        <select id="lang">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </label>
+      <button id="new-topic-btn" class="primary" data-i18n="new">+ New debate</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sort bar -->
+    <div class="sort-bar" id="sort-bar">
+      <button class="sort-btn active" data-sort="hot">
+        <span class="sort-icon">🔥</span> <span data-i18n="sortHot">Hot</span>
+      </button>
+      <button class="sort-btn" data-sort="new">
+        <span class="sort-icon">✨</span> <span data-i18n="sortNew">New</span>
+      </button>
+      <button class="sort-btn" data-sort="top">
+        <span class="sort-icon">🏆</span> <span data-i18n="sortTop">Top</span>
+      </button>
+      <button class="sort-btn" data-sort="controversial">
+        <span class="sort-icon">⚡</span> <span data-i18n="sortControversial">Controversial</span>
+      </button>
+    </div>
+
+    <section class="filters">
+      <div class="filter-row">
+        <span class="filter-label" data-i18n="genre">Genre</span>
+        <div class="chips" id="genre-chips"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label" data-i18n="region">Region</span>
+        <div class="chips" id="region-chips"></div>
+      </div>
+    </section>
+
+    <section class="feed">
+      <div class="feed-header">
+        <h2 data-i18n="feed">Debates</h2>
+        <span class="feed-count" id="feed-count"></span>
+      </div>
+      <ul id="topic-list" class="topic-list"></ul>
+    </section>
+  </main>
+
+  <!-- Topic detail modal -->
+  <div id="topic-modal" class="modal hidden">
+    <div class="modal-card topic-card-wide">
+      <button class="close" id="topic-close">&times;</button>
+      <h3 id="topic-title"></h3>
+      <p id="topic-meta" class="muted"></p>
+
+      <div class="topic-stats" id="topic-stats"></div>
+
+      <div class="balance-bar" id="modal-balance-bar">
+        <div class="balance-for" id="modal-balance-for" style="width: 50%"></div>
+        <div class="balance-against" id="modal-balance-against" style="width: 50%"></div>
+      </div>
+
+      <div class="side-filter" id="side-filter">
+        <button class="chip active" data-side="both" data-i18n="both">Both</button>
+        <button class="chip for" data-side="for" data-i18n="for">For</button>
+        <button class="chip opp" data-side="against" data-i18n="against">Against</button>
+      </div>
+      <div class="chat" id="chat"></div>
+      <form id="compose" class="compose">
+        <div class="side-pick">
+          <label class="side-opt for">
+            <input type="radio" name="side" value="for" checked />
+            <span data-i18n="for">For</span>
+          </label>
+          <label class="side-opt against">
+            <input type="radio" name="side" value="against" />
+            <span data-i18n="against">Against</span>
+          </label>
+        </div>
+        <div class="compose-row">
+          <textarea id="compose-body" required minlength="3" maxlength="2000"
+                    data-i18n-placeholder="writeArg" placeholder="Write your argument…"></textarea>
+          <button type="submit" class="primary" data-i18n="post">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- New topic modal -->
+  <div id="new-modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" id="new-close">&times;</button>
+      <h3 data-i18n="askQuestion">Ask a debate question</h3>
+      <form id="new-form">
+        <label class="form-label" data-i18n="yourQuestion">Your question</label>
+        <textarea id="new-title" required minlength="3" maxlength="200"
+                  data-i18n-placeholder="questionPh" placeholder="e.g. Should AI be allowed in classrooms?"></textarea>
+        <label class="form-label" data-i18n="genre">Genre</label>
+        <div class="chips" id="new-genre-chips"></div>
+        <label class="form-label" data-i18n="region">Region</label>
+        <div class="chips" id="new-region-chips"></div>
+        <div class="row">
+          <button type="button" class="ghost" id="new-cancel" data-i18n="cancel">Cancel</button>
+          <button type="submit" class="primary" data-i18n="post">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer" data-i18n="footer">A balance-first debate space · See both sides.</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
