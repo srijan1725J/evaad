@@ -538,18 +538,19 @@ main {
 }
 
 .modal-card {
-  background: var(--card-solid);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  width: 100%;
-  max-width: 640px;
-  max-height: 92vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
+background: var(--card-solid);
+border: none;
+border-radius: 0;
+width: 100%;
+height: 100%;
+max-width: none;
+max-height: none;
+display: flex;
+flex-direction: column;
+position: relative;
+animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+box-shadow: none;
+overflow: hidden;
 }
 
 @keyframes slideUp {
