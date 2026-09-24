@@ -1032,8 +1032,6 @@ overflow: hidden;
 
   .bubble { max-width: 92%; padding: 12px 14px; }
 
-  .modal-card { border-radius: 20px 20px 0 0; }
-
   .compose-row textarea { min-height: 44px; }
 
   .topic-card { padding: 16px 18px; }
